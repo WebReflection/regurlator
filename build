@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+if [ "$1" = "quant" ]; then
+  for png in $(ls icons/*.png); do
+    pngquant --strip -f $png --output $png.optimized
+    mv $png.optimized $png
+  done
+fi
+
+rm -rf *.zip
+mkdir -p regurlator/icons
+cp -R js regurlator/
+cp icons/*.png regurlator/icons/
+cp LICENSE regurlator/
+cp manifest.json regurlator/
+cp popup.html regurlator/
+cd regurlator
+zip -r -FS ../regurlator.zip * --exclude *.git*
+cd -
+rm -rf regurlator

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>regurlator</title>
+    <style>
+      body {
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      }
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      input, button {
+        line-height: 1.2rem;
+        padding: 2px;
+      }
+      table {
+        margin: 0 auto;
+      }
+      td {
+        padding: 4px;
+      }
+      tr.save {
+        opacity: .5;
+        transition: opacity .2s;
+      }
+      tr.save:hover {
+        opacity: 1;
+      }
+      td.separator {
+        border-bottom: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="regurlator">
+      <table>
+        <tr class="add">
+          <td>
+            <input type="text" name="regexp" required title="Search RegExp: ^http(s?):\/\/(.*?)\.example\.com\/(.*)$" placeholder="🔎">
+          </td>
+          <td>
+            <input type="text" name="redirect" required title="Redirect URL: http$1://$2.example.com/$3" placeholder="➡️">
+          </td>
+          <td>
+            <input type="checkbox" name="auto" title="Auto" checked>
+          </td>
+          <td>
+            <button title="Add">➕</button>
+          </td>
+        </tr>
+        <tr><td colspan="4" class="separator"></td></tr>
+        <tr class="save">
+          <td colspan="3">
+            <input type="file" name="restore" accept=".json" title="Restore from file">
+          </td>
+          <td>
+            <button name="save" title="Save">⬇️</button>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <script async src="js/popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,43 @@
+{
+  "name": "regurlator",
+  "short_name": "regurlator",
+  "version": "0.0.1",
+  "description": "A RegExp URL Redirector",
+  "author": "Andrea Giammarchi",
+  "manifest_version": 3,
+  "action": {
+    "default_icon": {
+      "16": "icons/16.png", 
+      "20": "icons/20.png", 
+      "32": "icons/32.png", 
+      "40": "icons/40.png"
+    },
+    "default_popup": "popup.html", 
+    "default_title": "regurlator"
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [{
+    "all_frames": true,
+    "js": ["js/regurlator.js"],
+    "match_about_blank": false,
+    "matches": ["<all_urls>"],
+    "run_at": "document_start"
+  }],
+  "icons": {
+    "16": "icons/16.png",
+    "32": "icons/32.png",
+    "48": "icons/48.png",
+    "64": "icons/64.png",
+    "128": "icons/128.png"
+  },
+  "permissions": [
+    "contextMenus",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}
