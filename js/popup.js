@@ -122,10 +122,8 @@
 
     function changeAuto(event) {
       const { currentTarget } = event;
-      currentTarget.disabled = true;
       rules[getRuleIndex(currentTarget)].auto = currentTarget.checked;
       storage.set({ rules });
-      currentTarget.disabled = false
     }
 
     function dropEvent(event) {
