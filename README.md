@@ -8,6 +8,11 @@ A RegExp URL Redirector:
 
 by [@WebReflection](https://x.com/WebReflection)
 
+## Web Stores
+  * [Chrome / Edge](https://chromewebstore.google.com/detail/regurlator/jfgfmidmfgfajfmhbfhbkidjnhgdfinl)
+  * Firefox - [it's complicated](https://x.com/khanhicetea/status/1983564678803423730) and I am afraid I have no time to care enough about it at this point, PR welcomed 👋
+
+
 ![regurlator popup example](./regurlator.png)
 
 ## Handy Redirects
