@@ -25,8 +25,8 @@
       event.preventDefault();
 
       rules.push({
-        regexp: regexp.value,
-        redirect: redirect.value,
+        regexp: regexp.value.trim(),
+        redirect: redirect.value.trim(),
         auto: auto.checked,
       });
 
@@ -85,6 +85,10 @@
 
       // ignore if not the active element
       if (document.activeElement !== apply) return dropEvent(event);
+
+      // remove trimmed spaces (if any)
+      regexp.value = s;
+      redirect.value = r;
 
       // otherwise add the new rule and move on ...
       addRow();
