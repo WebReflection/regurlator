@@ -16,6 +16,7 @@
     "default_title": "regurlator"
   },
   "background": {
+    "preferred_environment": ["page", "service_worker"],
     "scripts": ["js/background.js"],
     "service_worker": "js/background.js"
   },
