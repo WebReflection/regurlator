@@ -1,7 +1,7 @@
 {
   "name": "regurlator",
   "short_name": "regurlator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A RegExp URL Redirector",
   "author": "Andrea Giammarchi",
   "manifest_version": 3,
@@ -16,6 +16,8 @@
     "default_title": "regurlator"
   },
   "background": {
+    "preferred_environment": ["page", "service_worker"],
+    "scripts": ["js/background.js"],
     "service_worker": "js/background.js"
   },
   "content_scripts": [{
@@ -39,5 +41,13 @@
   ],
   "host_permissions": [
     "<all_urls>"
-  ]
+  ],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "@regurlator",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  }
 }
