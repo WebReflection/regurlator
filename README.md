@@ -19,5 +19,5 @@ by [@WebReflection](https://x.com/WebReflection)
 
 | Service     | RegExp | URL |
 | :---------- | :----: | :-: |
-| **Zoom**    | `^https:\/\/(?:\S+?)\.(zoom\.us)\/j\/(\d+)\?pwd=(.+)?$` | `https://app.$1/wc/join/$2?fromPWA=1&pwd=$3` |
+| **Zoom**    | `^https:\\/\\/(?:\\S+?)\\.(zoom\\.us)\\/j\\/(\\d+)\\?pwd(.+)?` | `https://app.$1/wc/join/$2?fromPWA=1&pwd$3` |
 | **BlueJeans** | `^(https?:\/\/(?:.*\.)?bluejeans\.com\/)(\d+(?:\/\d+)*)([?#][\S\s]*)?$` | `$1$2/webrtc$3` |
